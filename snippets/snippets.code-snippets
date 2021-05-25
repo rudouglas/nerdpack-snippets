@@ -1,0 +1,1016 @@
+{
+	// Controls 
+	"AccountPicker": {
+		"scope": "javascript,typescript",
+		"prefix": "NP:accountpicker",
+		"body": [
+			"<AccountPicker",
+			"	value={${1:variable}}",
+			"	onChange={${2:function}}",
+			"/>"
+		],
+	},
+	"Button": {
+		"prefix": "NP:Button",
+		"body": [
+			"<Button",
+			"	onClick={() => ${1:function}}",
+			"	type={Button.TYPE.${2:PRIMARY}}",
+			"	iconType={Button.ICON_TYPE.${3:DOCUMENTS__DOCUMENTS__NOTES__A_ADD}}",
+			"	sizeType={Button.SIZE_TYPE.${4:LARGE}}"
+			"	${5:loading}"
+			">",
+			"	${6:String}",
+			"</Button>"
+		],
+		"description": "Buttons are used throughout the product to provide users a way to complete an action"
+	},
+	"Checkbox": {
+		"prefix": "NP:Checkbox",
+		"body": [
+			"<Checkbox",
+			"	checked={${1:state}}",
+			"	onChange={${2:function}}",
+			"	label=\"${3:String}\"",
+			"	${4:checked}",
+			"	${5:disabled}"
+			"	${6:indeterminate}"
+			"/>"
+		],
+		"description": "Checkbox"
+	},
+	"Dropdown": {
+		"prefix": "NP:Dropdown",
+		"body": [
+		  "<Dropdown title=\"${1:title}\" label=\"${2:label}\" labelInline>${3}</Dropdown>;"
+		],
+		"description": "Toggleable overlays for displaying a list of options"
+	},
+	"DropdownSection": {
+		"prefix": "NP:DropdownSection",
+		"body": [
+		  "<DropdownSection title=\"${1:title}\">${2}</DropdownSection>"
+		],
+		"description": "DropdownSection"
+	},
+	"DropdownItem": {
+		"prefix": "NP:DropdownItem",
+		"body": [
+		  "<DropdownItem>${1:ItemName}</DropdownItem>"
+		],
+		"description": "DropdownItem"
+	},
+	"MultilineTextField": {
+		"prefix": "NP:MultilineTextField",
+		"body": [
+		  "<MultilineTextField",
+		  "    label=\"${1:label}\"",
+		  "    placeholder=\"${2:placeholder}\"",
+		  "/>;"
+		],
+		"description": "MultilineTextField"
+	},
+	"Radio": {
+		"prefix": "NP:Radio",
+		"body": [
+		  "<Radio ",
+		  "    onChange={(event) => ${1:function}} ",
+		  "    label=\"${2:label}\"",
+		  "    ${3:checked}",
+		  "    ${4:disabled}",
+		  "/>"
+		],
+		"description": "Radio"
+	},
+	"RadioGroup": {
+		"prefix": "NP:RadioGroup",
+		"body": [
+		  "<RadioGroup ",
+		  "    defaultValue=\"${1:1}\" ",
+		  "    onChange={${2:function}}",
+		  "    label=\"${3:label}\"",
+		  "    ${4:labelInline}",
+		  ">",
+		  "</RadioGroup>"
+		],
+		"description": "RadioGroup"
+	},
+	"SegmentedControl": {
+		"prefix": "NP:SegmentedControl",
+		"body": [
+		  "<SegmentedControl ",
+		  "    onChange={(evt, value) => ${1:function}(evt, value)}",
+		  "    value={${2:value}}",
+		  "    type={SegmentedControl.TYPE.${3:ICONS_ONLY}}>",
+		  "</SegmentedControl>;"
+		],
+		"description": "SegmentedControl"
+	},
+	"SegmentedControlItem": {
+		"prefix": "NP:SegmentedControlItem",
+		"body": [
+		  "<SegmentedControlItem ",
+		  "    value=\"${1:one}\" ",
+		  "    label=\"${2:One}\"",
+		  "    hint=\"${3:The first item}\" ",
+		  "    iconType={",
+		  "        SegmentedControlItem.ICON_TYPE.${4:HARDWARE_AND_SOFTWARE__SOFTWARE__CODE}",
+		  "      }",
+		  "    ${5:disabled}",
+		  "/>"
+		],
+		"description": "SegmentedControlItem"
+	},
+	"Select": {
+		"prefix": "NP:Select",
+		"body": [
+		  "<Select ",
+		  "    label=\"${1:Items}\" ",
+		  "    ${2:labelInline} ",
+		  "    onChange={(evt, value) => ${3:alert}(value)}>",
+		  "</Select>;"
+		],
+		"description": "Select"
+	},
+	"SelectItem": {
+		"prefix": "NP:SelectItem",
+		"body": [
+		  "<SelectItem value=\"${1:a}\">${2:Value is \"a\"}</SelectItem>"
+		],
+		"description": "SelectItem"
+	},
+	"Switch": {
+		"prefix": "NP:Switch",
+		"body": [
+		  "<Switch",
+		  "    onChange={(e) => ${1:alert}(`Toggle to: ${e.target.checked}`)}",
+		  "    label=\"${2:label}\"",
+		  "    ${3:defaultChecked}",
+		  "    ${4:disabled}",
+		  "/>"
+		],
+		"description": "Switch"
+	},
+	"TextField": {
+		"prefix": "NP:TextField",
+		"body": [
+		  "<TextField ",
+		  "    label=\"${1:label}\" ",
+		  "    placeholder=\"${2:e.g. John Doe}\" ",
+		  "    type={TextField.TYPE.${3:SEARCH}}",
+		  "    ${4:labelInline}",
+		  "    ${5:disabled}",
+		  "    ${6:readOnly}",
+		  "/>;"
+		],
+		"description": "TextField"
+	},
+
+	// Tables
+	"Table": {
+		"prefix": "NP:Table",
+		"body": [
+		  "<Table ",
+		  "    items={${1:this._getItems()}}",
+		  "    rowCount={${2:data.count}} ",
+		  "    onLoadMore={${3:fetchMore}}",
+		  "    selectionType={Table.SELECTION_TYPE.${4:SINGLE}}",
+		  "    selected={({ index }) => ${5:item.selected}}",
+		  "    onSelect={(evt, { index }) => (${6:item.selected} = evt.target.checked)}",
+		  ">",
+		  "</Table>"
+		],
+		"description": "Table"
+	},
+	"TableHeader": {
+		"prefix": "NP:TableHeader",
+		"body": [
+		  "<TableHeader actions={${1:this._getActions()}}>${2}</TableHeader>"
+		],
+		"description": "TableHeader"
+	},
+	"TableHeaderCell": {
+		"prefix": "NP:TableHeaderCell",
+		"body": [
+		  "<TableHeaderCell ",
+		  "    value={${1:value}}",
+		  "    ${2:sortable}",
+		  "    sortingType={${3:sortingType0}}",
+		  "    sortingOrder={${4:0}}",
+		  "    onClick={${5:this.onclick()}}",
+		  "    width=\"${6:100%}\"",
+		  ">",
+		  "    ${7:header}",
+		  "</TableHeaderCell>"
+		],
+		"description": "TableHeaderCell"
+	},
+	"TableRow": {
+		"prefix": "NP:TableRow",
+		"body": [
+		  "<TableRow actions={${1:this._getActions()}}>${2}</TableRow>"
+		],
+		"description": "TableRow"
+	},
+	"TableRowCell": {
+		"prefix": "NP:TableRowCell",
+		"body": [
+		  "<TableRowCell>{${1:value}}</TableRowCell>"
+		],
+		"description": "TableRowCell"
+	},
+	"EntityTitleTableRowCell": {
+		"prefix": "NP:EntityTitleTableRowCell",
+		"body": [
+		  "<EntityTitleTableRowCell value={${1:item}} />"
+		],
+		"description": "EntityTitleTableRowCell"
+	},
+	"FavoriteTableRowCell": {
+		"prefix": "NP:FavoriteTableRowCell",
+		"body": [
+		  "<FavoriteTableRowCell checked={${1:item.favorite}} />"
+		],
+		"description": "FavoriteTableRowCell"
+	},
+	"MetricTableRowCell": {
+		"prefix": "NP:MetricTableRowCell",
+		"body": [
+		  "<MetricTableRowCell",
+		  "    type={MetricTableRowCell.TYPE.${1:BITS}}",
+		  "    value={${2:value}}",
+		  "/>"
+		],
+		"description": "MetricTableRowCell"
+	},
+	"SparklineTableRowCell": {
+		"prefix": "NP:SparklineTableRowCell",
+		"body": [
+		  "<SparklineTableRowCell",
+		  "    accountId={${1:id}}",
+		  "    query={${2:query}}",
+		  "/>"
+		],
+		"description": "SparklineTableRowCell"
+	},
+	"UserTableRowCell": {
+		"prefix": "NP:UserTableRowCell",
+		"body": [
+		  "<UserTableRowCell value={${1:item}} />"
+		],
+		"description": "UserTableRowCell"
+	},
+
+	// Feedback
+	"Icon": {
+		"prefix": "NP:Icon",
+		"body": [
+		  "<Icon type={Icon.TYPE.${1:LOCATION__LOCATION__HOME}} />;"
+		],
+		"description": "Icon"
+	},
+	"Spinner": {
+		"prefix": "NP:Spinner",
+		"body": [
+		  "<Spinner type={Spinner.TYPE.${1:DOT}} ${2:inline} />;"
+		],
+		"description": "Spinner"
+	},
+	"Toast": {
+		"prefix": "NP:Toast",
+		"body": [
+		  "Toast.showToast({",
+		  "    title: '${1:title}',",
+		  "    description: '${2:description}',",
+		  "    additionalInfoLink: {",
+		  "        label: '${3:label}',",
+		  "        to: '${4:link}',",
+		  "    },",
+		  "    type: Toast.TYPE.${5:CRITICAL},",
+		  "    actions: [",
+		  "        {",
+		  "            label: '${6:label}',",
+		  "            onClick: () => ${7:function},",
+		  "        },",
+		  "    ],",
+		  "});"
+		],
+		"description": "Toast"
+	},
+
+	// Indicators
+	"Badge": {
+		"prefix": "NP:Badge",
+		"body": [
+		  "<Badge type={Badge.TYPE.${1:INFO}}>${2:Badge}</Badge>"
+		],
+		"description": "Badge"
+	},
+	"Modal": {
+		"prefix": "NP:Modal",
+		"body": [
+		  "<Modal ",
+		  "    hidden={${1:this.state.hidden}} ",
+		  "    onClose={${2:this._onClose}}",
+		  "    onHideEnd={${3:this._onHideEnd}}",
+		  ">",
+		  "    ${4}",
+		  "</Modal>"
+		],
+		"description": "Modal"
+	},
+	"Popover": {
+		"prefix": "NP:Popover",
+		"body": [
+		  "<Popover>",
+		  "  <PopoverTrigger>${1:Trigger}</PopoverTrigger>",
+		  "  <PopoverBody>${2}</PopoverBody>",
+		  "</Popover>;"
+		],
+		"description": "Popover"
+	},
+	"Tooltip": {
+		"prefix": "NP:Tooltip",
+		"body": [
+		  "<Tooltip",
+		  "    text=\"${1:text}\"",
+		  "    placementType={Tooltip.PLACEMENT_TYPE.${2:BOTTOM}}",
+		  "    additionalInfoLink={${3:additionalInfoLink}}",
+		  ">",
+		  "    ${4}",
+		  "</Tooltip>"
+		],
+		"description": "Tooltip"
+	},
+
+	// Structure
+	"AutoSizer": {
+		"prefix": "NP:AutoSizer",
+		"body": [
+		  "<AutoSizer>",
+		  "    {({ width, height }) => (",
+		  "        <div style={{ ...style, height, width }}>",
+		  "            width: {width}, height: {height}",
+		  "        </div>",
+		  "    )}",
+		  "</AutoSizer>"
+		],
+		"description": "AutoSizer"
+	},
+	"Card": {
+		"prefix": "NP:Card",
+		"body": [
+		  "<Card>",
+		  "    <CardHeader title=\"${1:title}\" subtitle=\"${2:subtitle}\" />",
+		  "    <CardBody>",
+		  "        ${3:body}",
+		  "    </CardBody>",
+		  "</Card>;"
+		],
+		"description": "Card"
+	},
+	"Grid": {
+		"prefix": "NP:Grid",
+		"body": [
+		  "<Grid gapType={Grid.GAP_TYPE.${1:MEDIUM}}>${2}</Grid>"
+		],
+		"description": "Grid"
+	},
+	"GridItem": {
+		"prefix": "NP:GridItem",
+		"body": [
+		  "<GridItem ",
+		  "    columnSpan={${1:1}}",
+		  "    ${2:collapseGapBefore}",
+		  "    ${3:collapseGapAfter}",
+		  ">${4}</GridItem>"
+		],
+		"description": "GridItem"
+	},
+	"Layout": {
+		"prefix": "NP:Layout",
+		"body": [
+		  "<Layout ${1:preview} ${2:fullHeight}>${3}</Layout>;"
+		],
+		"description": "Layout"
+	},
+	"LayoutItem": {
+		"prefix": "NP:LayoutItem",
+		"body": [
+		  "<LayoutItem",
+		  "    type={LayoutItem.TYPE.${1:SPLIT_LEFT}}",
+		  "    sizeType={LayoutItem.SIZE_TYPE.${2:SMALL}}",
+		  ">",
+		  "    ${3}",
+		  "</LayoutItem>"
+		],
+		"description": "LayoutItem"
+	},
+	"LayoCollapsibleLayoutItemutItem": {
+		"prefix": "NP:CollapsibleLayoutItem",
+		"body": [
+		  "<CollapsibleLayoutItem",
+		  "    collapsed={this.state.${1:collapsedRight}}",
+		  "    triggerType={CollapsibleLayoutItem.TRIGGER_TYPE.${2:CUSTOM}}",
+		  "    type={LayoutItem.TYPE.${3:SPLIT_RIGHT}}",
+		  ">",
+		  "    ${4}",
+		  "</CollapsibleLayoutItem>"
+		],
+		"description": "LayoCollapsibleLayoutItemutItem"
+	},
+	"List": {
+		"prefix": "NP:List",
+		"body": [
+		  "<List",
+		  "    items={${1:items}}",
+		  "    rowCount={${2:remoteTotalNumberOfItems}}",
+		  "    rowHeight={${3:40}}",
+		  "    onLoadMore={${4:loadMoreItems}}",
+		  ">",
+		  "    ${5}",
+		  "</List>"
+		],
+		"description": "List"
+	},
+	"ListItem": {
+		"prefix": "NP:ListItem",
+		"body": [
+		  "<ListItem key={${1:key}}>${2:Item 1}</ListItem>"
+		],
+		"description": "ListItem"
+	  
+	},
+	"Spacing": {
+		"prefix": "NP:Spacing",
+		"body": [
+		  "<Spacing type={[Spacing.TYPE.${1:OMIT}, Spacing.TYPE.${2:LARGE}]}>${3}</Spacing>;"
+		],
+		"description": "Spacing"
+	},
+	"Stack": {
+		"prefix": "NP:Stack",
+		"body": [
+		  "<Stack ",
+		  "    directionType={Stack.DIRECTION_TYPE.${1:HORIZONTAL}}",
+		  "    gapType={Stack.GAP_TYPE.${2:SMALL}}",
+		  "    horizontalType={Stack.HORIZONTAL_TYPE.${3:LEFT}}",
+		  "    verticalType={Stack.VERTICAL_TYPE.${4:TOP}}",
+		  "    ${5:preview}",
+		  ">",
+		  "    ${6}",
+		  "</Stack>"
+		],
+		"description": "Stack"
+	},
+	"StackItem": {
+		"prefix": "NP:StackItem",
+		"body": [
+		  "<StackItem>${1}</StackItem>"
+		],
+		"description": "StackItem"
+	},
+	"Tabs": {
+		"prefix": "NP:Tabs",
+		"body": [
+		  "<Tabs ",
+		  "    defaultValue=\"${1:tab-3}\" ",
+		  "    items={${2:items}}",
+		  "    onChange={${3:function}}",
+		  ">",
+		  "    ${4}",
+		  "</Tabs>;"
+		],
+		"description": "Tabs"
+	},
+	"TabsItem": {
+		"prefix": "NP:TabsItem",
+		"body": [
+		  "<TabsItem value=\"${1:value}\" label=\"${2:label}\">",
+		  "    ${3:tab_name}",
+		  "</TabsItem>"
+		],
+		"description": "TabsItem"
+	},
+	"BlockText": {
+		"prefix": "NP:BlockText",
+		"body": [
+		  "<BlockText type={BlockText.TYPE.${1:PARAGRAPH}} tagType={BlockText.TYPE.${2:DIV}}>",
+		  "    ${3:text}",
+		  "</BlockText>;"
+		],
+		"description": "BlockText"
+	},
+	"HeadingText": {
+		"prefix": "NP:HeadingText",
+		"body": [
+		  "<HeadingText ",
+		  "    type={HeadingText.TYPE.${1:HEADING_1}}",
+		  "    tagType={HeadingText.TAG_TYPE.${2:DIV}}",
+		  ">",
+		  "    ${3:heading}",
+		  "</HeadingText>"
+		],
+		"description": "HeadingText"
+	},
+	"Link": {
+		"prefix": "NP:Link",
+		"body": [
+		  "<Link to=\"${1:href}\">${2:label}</Link>;"
+		],
+		"description": "Link"
+	},
+
+	// Charts
+	"AreaChart": {
+		"prefix": "NP:AreaChart",
+		"body": [
+		  "<AreaChart",
+		  "  accountId={${1:accountId}}",
+		  "  query=\"${2:NRQL}\"",
+		  "  ${3:fullWidth}",
+		  "  ${4:fullHeight}",
+		  "/>;"
+		],
+		"description": "AreaChart"
+	},
+	"BarChart": {
+		"prefix": "NP:BarChart",
+		"body": [
+		  "<BarChart",
+		  "  accountId={${1:accountId}}",
+		  "  query=\"${2:NRQL}\"",
+		  "  ${3:fullWidth}",
+		  "  ${4:fullHeight}",
+		  "/>;"
+		],
+		"description": "BarChart"
+	},
+	"BillboardChart": {
+		"prefix": "NP:BillboardChart",
+		"body": [
+		  "<BillboardChart",
+		  "  accountId={${1:accountId}}",
+		  "  query=\"${2:NRQL}\"",
+		  "  ${3:fullWidth}",
+		  "  ${4:fullHeight}",
+		  "/>;"
+		],
+		"description": "BillboardChart"
+	},
+	"ChartGroup": {
+		"prefix": "NP:ChartGroup",
+		"body": [
+		  "<ChartGroup>${1}</ChartGroup>"
+		],
+		"description": "ChartGroup"
+	},
+	"FunnelChart": {
+		"prefix": "NP:FunnelChart",
+		"body": [
+		  "<FunnelChart",
+		  "  accountId={${1:accountId}}",
+		  "  query=\"${2:NRQL}\"",
+		  "  ${3:fullWidth}",
+		  "  ${4:fullHeight}",
+		  "/>;"
+		],
+		"description": "FunnelChart"
+	},
+	"HeatmapChart": {
+		"prefix": "NP:HeatmapChart",
+		"body": [
+		  "<HeatmapChart",
+		  "  accountId={${1:accountId}}",
+		  "  query=\"${2:NRQL}\"",
+		  "  ${3:fullWidth}",
+		  "  ${4:fullHeight}",
+		  "/>;"
+		],
+		"description": "HeatmapChart"
+	},
+	"HistogramChart": {
+		"prefix": "NP:HistogramChart",
+		"body": [
+		  "<HistogramChart",
+		  "  accountId={${1:accountId}}",
+		  "  query=\"${2:NRQL}\"",
+		  "  ${3:fullWidth}",
+		  "  ${4:fullHeight}",
+		  "/>;"
+		],
+		"description": "HistogramChart"
+	},
+	"JsonChart": {
+		"prefix": "NP:JsonChart",
+		"body": [
+		  "<JsonChart",
+		  "  accountId={${1:accountId}}",
+		  "  query=\"${2:NRQL}\"",
+		  "  ${3:fullWidth}",
+		  "  ${4:fullHeight}",
+		  "/>;"
+		],
+		"description": "JsonChart"
+	},
+	"LineChart": {
+		"prefix": "NP:LineChart",
+		"body": [
+		  "<LineChart",
+		  "  accountId={${1:accountId}}",
+		  "  query=\"${2:NRQL}\"",
+		  "  ${3:fullWidth}",
+		  "  ${4:fullHeight}",
+		  "/>;"
+		],
+		"description": "LineChart"
+	},
+	"PieChart": {
+		"prefix": "NP:PieChart",
+		"body": [
+		  "<PieChart",
+		  "  accountId={${1:accountId}}",
+		  "  query=\"${2:NRQL}\"",
+		  "  ${3:fullWidth}",
+		  "  ${4:fullHeight}",
+		  "/>;"
+		],
+		"description": "PieChart"
+	},
+	"ScatterChart": {
+		"prefix": "NP:ScatterChart",
+		"body": [
+		  "<ScatterChart",
+		  "  accountId={${1:accountId}}",
+		  "  query=\"${2:NRQL}\"",
+		  "  ${3:fullWidth}",
+		  "  ${4:fullHeight}",
+		  "/>;"
+		],
+		"description": "ScatterChart"
+	},
+	"SparklineChart": {
+		"prefix": "NP:SparklineChart",
+		"body": [
+		  "<SparklineChart",
+		  "  accountId={${1:accountId}}",
+		  "  query=\"${2:NRQL}\"",
+		  "  ${3:fullWidth}",
+		  "  ${4:fullHeight}",
+		  "/>;"
+		],
+		"description": "SparklineChart"
+	},
+	"StackedBarChart": {
+		"prefix": "NP:StackedBarChart",
+		"body": [
+		  "<StackedBarChart",
+		  "  accountId={${1:accountId}}",
+		  "  query=\"${2:NRQL}\"",
+		  "  ${3:fullWidth}",
+		  "  ${4:fullHeight}",
+		  "/>;"
+		],
+		"description": "StackedBarChart"
+	},
+	"TableChart": {
+		"prefix": "NP:TableChart",
+		"body": [
+		  "<TableChart",
+		  "  accountId={${1:accountId}}",
+		  "  query=\"${2:NRQL}\"",
+		  "  ${3:fullWidth}",
+		  "  ${4:fullHeight}",
+		  "/>;"
+		],
+		"description": "TableChart"
+	},
+
+	// Query and Storage
+	"AccountStorageMutationWrite": {
+		"prefix": "NP:AccountStorageMutationWrite",
+		"body": [
+		  "AccountStorageMutation.mutate({",
+		  "    accountId: ${1:1},",
+		  "    actionType: AccountStorageMutation.ACTION_TYPE.WRITE_DOCUMENT,",
+		  "    collection: '${2:myCollection}',",
+		  "    documentId: '${3:myDocumentId}',",
+		  "    document: {",
+		  "      ${4:key}: '${5:Value}',",
+		  "    },",
+		  "});"
+		],
+		"description": "AccountStorageMutationWrite"
+	},
+	"AccountStorageMutationDelete": {
+		"prefix": "NP:AccountStorageMutationAccountStorageMutationDelete",
+		"body": [
+		  "AccountStorageMutation.mutate({",
+		  "    accountId: ${1:1},",
+		  "    actionType: AccountStorageMutation.ACTION_TYPE.DELETE_DOCUMENT,",
+		  "    collection: '${2:myCollection}',",
+		  "    documentId: '${3:myDocumentId}',",
+		  "});"
+		],
+		"description": "AccountStorageMutationDelete"
+	},
+	"AccountStorageMutationDeleteCollection": {
+		"prefix": "NP:AccountStorageMutationDeleteCollection",
+		"body": [
+		  "AccountStorageMutation.mutate({",
+		  "    accountId: ${1:1},",
+		  "    actionType: AccountStorageMutation.ACTION_TYPE.DELETE_COLLECTION,",
+		  "    collection: '${2:myCollection}',",
+		  "});"
+		],
+		"description": "AccountStorageMutationDeleteCollection"
+	},
+	"AccountStorageQuery": {
+		"prefix": "NP:AccountStorageQuery",
+		"body": [
+		  "AccountStorageQuery.query({",
+		  "    accountId: ${1:1},",
+		  "    collection: '${2:myCollection}',",
+		  "    documentId: '${3:myDocumentId}',",
+		  "  }).then(({ data }) => console.log(data));"
+		],
+		"description": "AccountStorageQuery"
+	},
+	"AccountsQuery": {
+		"prefix": "NP:AccountsQuery",
+		"body": [
+		  "AccountsQuery.query().then(({ data }) => console.log(data));"
+		],
+		"description": "AccountsQuery"
+	},
+	"EntitiesByDomainTypeQuery": {
+		"prefix": "NP:EntitiesByDomainTypeQuery",
+		"body": [
+		  "EntitiesByDomainTypeQuery.query({",
+		  "    entityDomain: '${1:APM}',",
+		  "    entityType: '${2:APPLICATION}',",
+		  "  }).then(({ data }) => console.log(data));"
+		],
+		"description": "EntitiesByDomainTypeQuery"
+	},
+	"EntitiesByGuidsQuery": {
+		"prefix": "NP:EntitiesByGuidsQuery",
+		"body": [
+		  "EntitiesByGuidsQuery.query({",
+		  "    entityGuids: [",
+		  "      '${1:guid}',",
+		  "      '${2:guid}',",
+		  "    ],",
+		  "  }).then(({ data }) => ${3:function}(data));"
+		],
+		"description": "EntitiesByGuidsQuery"
+	},
+	"EntitiesByNameQuery": {
+		"prefix": "NP:EntitiesByNameQuery",
+		"body": [
+		  "EntitiesByNameQuery.query({",
+		  "    name: '${1:entityName}',",
+		  "  }).then(({ data }) => ${2:function}(data));"
+		],
+		"description": "EntitiesByNameQuery"
+	},
+	"EntityByGuidQuery": {
+		"prefix": "NP:EntityByGuidQuery",
+		"body": [
+		  "EntityByGuidQuery.query({",
+		  "    entityGuid: '${1:guid}',",
+		  "  }).then(({ data }) => console.log(data));"
+		],
+		"description": "EntityByGuidQuery"
+	},
+	"EntityCountQuery": {
+		"prefix": "NP:EntityCountQuery",
+		"body": [
+		  "EntityCountQuery.query().then(({ data }) => ${1:function}(data));"
+		],
+		"description": "EntityCountQuery"
+	},
+	"EntitySearchQuery": {
+		"prefix": "NP:EntitySearchQuery",
+		"body": [
+		  "EntitySearchQuery.query({",
+		  "    filters: [",
+		  "      {",
+		  "        type: EntitySearchQuery.FILTER_TYPE.${1:TAG},",
+		  "        value: { key: '${2:environment}', value: '${3:production}' },",
+		  "      },",
+		  "    ],",
+		  "  }).then(({ data }) => console.log(data));"
+		],
+		"description": "EntitySearchQuery"
+	},
+	"EntityStorageQuery": {
+		"prefix": "NP:EntityStorageQuery",
+		"body": [
+		  "EntityStorageQuery.query({",
+		  "    entityGuid: '${1:guid}',",
+		  "    collection: '${2:myCollection}',",
+		  "    documentId: '${3:myDocumentId}',",
+		  "  }).then(({ data }) => console.log(data));"
+		],
+		"description": "EntityStorageQuery"
+	},
+	"EntityStorageMutationWrite": {
+		"prefix": "NP:EntityStorageMutationWrite",
+		"body": [
+		  "EntityStorageMutation.mutate({",
+		  "    entityGuid: '${1:guid}',    ",
+		  "    actionType: EntityStorageMutation.ACTION_TYPE.WRITE_DOCUMENT,",
+		  "    collection: '${2:myCollection}',",
+		  "    documentId: '${3:myDocumentId}',",
+		  "    document: {",
+		  "      ${4:key}: '${5:Value}',",
+		  "    },",
+		  "});"
+		],
+		"description": "EntityStorageMutation"
+	},
+	"EntityStorageMutationDelete": {
+		"prefix": "NP:EntityStorageMutationDelete",
+		"body": [
+		  "EntityStorageMutation.mutate({",
+		  "    entityGuid: '${1:guid}',    ",
+		  "    actionType: EntityStorageMutation.ACTION_TYPE.DELETE_DOCUMENT,",
+		  "    collection: '${2:myCollection}',",
+		  "    documentId: '${3:myDocumentId}',",
+		  "});"
+		],
+		"description": "EntityStorageMutationDelete"
+	},
+	"EntityStorageMutationDeleteCollection": {
+		"prefix": "NP:EntityStorageMutationDeleteCollection",
+		"body": [
+		  "EntityStorageMutation.mutate({",
+		  "    entityGuid: '${1:guid}',    ",
+		  "    actionType: EntityStorageMutation.ACTION_TYPE.DELETE_COLLECTION,",
+		  "    collection: '${2:myCollection}',",
+		  "});"
+		],
+		"description": "EntityStorageMutationDeleteCollection"
+	},
+	"NerdGraphMutation": {
+		"prefix": "NP:NerdGraphMutation",
+		"body": [
+		  "NerdGraphMutation.mutate({",
+		  "    mutation: ngql`",
+		  "      ${1}",
+		  "    `,",
+		  "    variables: {",
+		  "      ${2:key}: '${3:value}',",
+		  "    },",
+		  "});"
+		],
+		"description": "NerdGraphMutation"
+	},
+	"NerdGraphQuery": {
+		"prefix": "NP:NerdGraphQuery",
+		"body": [
+		  "<NerdGraphQuery query={${1:query}} variables={${2:variables}}>",
+		  "      {({ loading, error, data }) => {",
+		  "        if (loading) {",
+		  "          return <Spinner />;",
+		  "        }",
+		  "",
+		  "        if (error) {",
+		  "          return 'Error!';",
+		  "        }",
+		  "",
+		  "        return ${3:<Component />};",
+		  "      }}",
+		  "</NerdGraphQuery>"
+		],
+		"description": "NerdGraphQuery"
+	},
+	"NrqlQuery": {
+		"prefix": "NP:NrqlQuery",
+		"body": [
+		  "<NrqlQuery",
+		  "  pollInterval={${1:2000}}",
+		  "  accountId={${2:1}}",
+		  "  query=\"${3:query}\"",
+		  ">",
+		  "  {({ data }) => {",
+		  "    return ${4:<Component />};",
+		  "  }}",
+		  "</NrqlQuery>;"
+		],
+		"description": "NrqlQuery"
+	},
+	"UserQuery": {
+		"prefix": "NP:UserQuery",
+		"body": [
+		  "UserQuery.query().then(({ data }) => ${1:function}(data));"
+		],
+		"description": "UserQuery"
+	},
+	"UserStorageMutationWrite": {
+		"prefix": "NP:UserStorageMutationWrite",
+		"body": [
+		  "UserStorageMutation.mutate({",
+		  "    actionType: UserStorageMutation.ACTION_TYPE.WRITE_DOCUMENT,",
+		  "    collection: '${1:myCollection}',",
+		  "    documentId: '${2:myDocumentId}',",
+		  "    document: {",
+		  "      ${3:key}: '${4:value}',",
+		  "    },",
+		  "});"
+		],
+		"description": "UserStorageMutationWrite"
+	},
+	"UserStorageMutationDelete": {
+		"prefix": "NP:UserStorageMutationDelete",
+		"body": [
+		  "UserStorageMutation.mutate({",
+		  "    actionType: UserStorageMutation.ACTION_TYPE.DELETE_DOCUMENT,",
+		  "    collection: '${1:myCollection}',",
+		  "    documentId: '${2:myDocumentId}',",
+		  "});"
+		],
+		"description": "UserStorageMutationDelete"
+	},
+	"UserStorageMutationDeleteCollection": {
+		"prefix": "NP:UserStorageMutationDeleteCollection",
+		"body": [
+		  "UserStorageMutation.mutate({",
+		  "    actionType: UserStorageMutation.ACTION_TYPE.DELETE_COLLECTION,",
+		  "    collection: '${1:myCollection}',",
+		  "});"
+		],
+		"description": "UserStorageMutationDeleteCollection"
+	},
+	"UserStorageQuery": {
+		"prefix": "NP:UserStorageQuery",
+		"body": [
+		  "UserStorageQuery.mutate({",
+		  "    collection: '${1:myCollection}',",
+		  "    documentId: '${2:myDocumentId}',",
+		  "});"
+		],
+		"description": "UserStorageQuery"
+	},
+	"NerdletStateContext": {
+		"prefix": "NP:NerdletStateContext",
+		"body": [
+		  "<NerdletStateContext.Consumer>",
+		  "  {(nerdletState) => ${1:<Component} platformState={platformState}/>}",
+		  "</NerdletStateContext.Consumer>;"
+		],
+		"description": "NerdletStateContext"
+	},
+	"PlatformStateContext": {
+		"prefix": "NP:PlatformStateContext",
+		"body": [
+		  "<PlatformStateContext.Consumer>",
+		  "  {(platformState) => ${1:<Component} platformState={platformState}/>}",
+		  "</PlatformStateContext.Consumer>;"
+		],
+		"description": "PlatformStateContext"
+	},
+	"Logger": {
+		"prefix": "NP:Logger",
+		"body": [
+		  "logger.${1|log,warn,deprecate,debug,error|}($2)"
+		],
+		"description": "Logger"
+	},
+	"Navigator": {
+		"prefix": "NP:Navigator",
+		"scope": "javascript,typescript",
+		"body": [
+		  "navigation.${1|getOpenEntityLocation,getOpenLauncherLocation,getOpenNerdletLocation,getOpenOverlayLocation,getOpenStackedEntityLocation,getOpenStackedNerdletLocation,getReplaceNerdletLocation,openEntity,openLauncher,openNerdlet,openOverlay,openStackedEntity,openStackedNerdlet,replaceNerdlet|}(${2:value})"
+		],
+		"description": "Navigator"
+	},
+	"Nerdlet": {
+		"prefix": "NP:Nerdlet",
+		"scope": "javascript,typescript",
+		"body": [
+		  "nerdlet.${1|getSetUrlStateLocation,setConfig,setUrlState|}(${2:value})"
+		],
+		"description": "Nerdlet"
+	},
+	"NerdGraph Query": {
+		"scope": "javascript,typescript",
+		"prefix": "NP:gql",
+		"body": [
+			"const gql = `",
+			"	${1}",
+			"`;",
+			"const result = await NerdGraphQuery.query({ query: gql }).then((res) => {",
+			"	console.log('Result', res);",
+			"	if (res.data.errors) {",
+			"		throw new Error(res.data.errors);",
+			"	}",
+			"	const data = res.data;",
+			"	",
+			"	return data;",
+			"});",
+		  ],
+	},
+}
+
